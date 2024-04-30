@@ -6,7 +6,7 @@
 /*   By: raamorim <raamorim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:29:02 by raamorim          #+#    #+#             */
-/*   Updated: 2024/04/30 13:37:38 by raamorim         ###   ########.fr       */
+/*   Updated: 2024/04/30 13:42:21 by raamorim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	full_size;
 
 	full_size = (count * size);
-	if ((full_size / size) != count)
-		;
-	return (NULL);
+	if (full_size / size != count)
+		return (NULL);
 	dest = malloc(count * size);
 	if (!dest)
 		return (NULL);
