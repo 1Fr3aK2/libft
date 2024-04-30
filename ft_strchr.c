@@ -6,7 +6,7 @@
 /*   By: raamorim <raamorim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 12:12:43 by raamorim          #+#    #+#             */
-/*   Updated: 2024/04/30 12:54:19 by raamorim         ###   ########.fr       */
+/*   Updated: 2024/04/30 13:43:34 by raamorim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_strchr(const char *str, int c)
 {
 	char	*s;
-
 
 	s = (char *)str;
 	while (*s)
