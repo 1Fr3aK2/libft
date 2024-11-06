@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_help.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raamorim <raamorim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 12:12:43 by raamorim          #+#    #+#             */
-/*   Updated: 2024/04/30 13:43:34 by raamorim         ###   ########.fr       */
+/*   Created: 2024/05/08 12:58:36 by raamorim          #+#    #+#             */
+/*   Updated: 2024/05/08 12:58:36 by raamorim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char	*ft_strchr(const char *str, int c)
+void	ft_putchar(char c, int *counter)
 {
-	char	*s;
-
-	if (!str)
-		return (NULL);
-	s = (char *)str;
-	while (*s)
-	{
-		if (*s == (char)c)
-			return (s);
-		s++;
-	}
-	if (*s == '\0' && c == '\0')
-		return (s);
-	return (NULL);
+	write(1, &c, 1);
+	(*counter)++;
 }
+
 /* int main()
 {
-	char *str;
-	int c;
+	int counter;
 
-	str = "test string";
-	c = 'n';
-
-	printf("%s\n", ft_strchr("test string", 't' + 256));
-	return(0);
+	counter = ft_putchar('%');
+	printf("\n");
+	printf("%d", counter);
 } */
